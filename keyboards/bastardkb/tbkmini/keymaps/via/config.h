@@ -9,7 +9,7 @@
  * helps with keys like A are also SHIFT when held */
 // #undef PERMISSIVE_HOLD
 // #define IGNORE_MOD_TAP_INTERRUPT
-//
+
 // #define TAPPING_TERM 200
 
 #define COMBO_COUNT 18
@@ -27,15 +27,7 @@
  *  These options are also useful to firmware size reduction.
  */
 
-/* disable debug print */
-#define NO_DEBUG
-
-/* disable print */
-#define NO_PRINT
-
 /* disable action features */
-#define NO_ACTION_LAYER
-#define NO_ACTION_TAPPING
 #define NO_ACTION_ONESHOT
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
