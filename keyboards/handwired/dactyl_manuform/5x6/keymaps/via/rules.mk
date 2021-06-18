@@ -1,0 +1,4 @@
+VIAL_ENABLE = yes
+VIA_ENABLE = yes
+RGBLIGHT_ENABLE = yes
+COMBO_ENABLE = yes
