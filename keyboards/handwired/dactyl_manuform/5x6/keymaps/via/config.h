@@ -20,7 +20,7 @@
 
 // #define TAPPING_TERM 200
 
-#define COMBO_COUNT 18
+#define COMBO_COUNT 9
 #define COMBO_TERM 20
 
 #undef RGBLED_NUM

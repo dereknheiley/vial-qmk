@@ -31,6 +31,7 @@ const uint16_t PROGMEM DF_COMBO[] = {KC_D, KC_F, COMBO_END};
 
 const uint16_t PROGMEM JK_COMBO[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM KL_COMBO[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM KCLN_COMBO[] = {KC_L, KC_SCLN, COMBO_END};
 
 const uint16_t PROGMEM XC_COMBO[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM CV_COMBO[] = {KC_C, KC_V, COMBO_END};
@@ -40,11 +41,12 @@ const uint16_t PROGMEM COMMDOT_COMBO[] = {KC_COMM,  KC_DOT, COMBO_END};
 
 /* Declare the combos you will use here, and DON'T FORGET TO UPDATE config.h to set #define COMBO_COUNT number_of_combos_herez */
 enum combos {
-  SD_LBRC,
-  DF_RBRC,
+  SD_LPRN,
+  DF_RPRN,
 
-  JK_LPRN,
-  KL_RPRN,
+  JK_LBRC,
+  KL_RBRC,
+  KCLN_BSLS,
 
   XC_BSPC,
   CV_ESC,
@@ -55,11 +57,12 @@ enum combos {
 
 /* DON'T FORGET TO UPDATE config.h to set #define COMBO_COUNT number_of_combos_herez */
 combo_t key_combos[COMBO_COUNT] = {
-  [SD_LBRC] = COMBO(SD_COMBO, KC_LBRC),
-  [DF_RBRC] = COMBO(DF_COMBO, KC_RBRC),
+  [SD_LPRN] = COMBO(SD_COMBO, KC_LPRN),
+  [DF_RPRN] = COMBO(DF_COMBO, KC_RPRN),
 
-  [JK_LPRN] = COMBO(JK_COMBO, KC_LPRN),
-  [KL_RPRN] = COMBO(KL_COMBO, KC_RPRN),
+  [JK_LBRC] = COMBO(JK_COMBO, KC_LBRC),
+  [KL_RBRC] = COMBO(KL_COMBO, KC_RBRC),
+  [KCLN_BSLS] = COMBO(KCLN_COMBO, KC_BSLS),
 
   [XC_BSPC] = COMBO(XC_COMBO, KC_BSPC),
   [CV_ESC]  = COMBO(CV_COMBO, KC_ESC),
@@ -76,16 +79,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 LSFT_T(KC_CAPS), KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                         KC_H  , KC_J  , KC_K  , KC_L  ,KC_SCLN,RSFT_T(KC_QUOT),
         KC_LCPO, KC_Z  , KC_X  , KC_C  , KC_V  , KC_B  ,                         KC_N  , KC_M  ,KC_COMM,KC_DOT ,KC_SLSH,KC_RCPC,
                  LCTL_T(KC_DEL),LALT_T(KC_ESC),                                                  KC_MINS, KC_EQL,
-
-//6-thumb
-//                           LGUI_T(KC_BSPC), LT(1,KC_SPC),                   LT(1,KC_BSPC), KC_DEL,
-//                                                  KC_ENT, KC_ESC,  KC_HOME, KC_ENT,
-//                                                 KC_BSPC, KC_DEL,  MO(2) , KC_RALT
-
-//5-thumb
-//                                 KC_NO, LGUI_T(KC_BSPC),                        KC_DEL, KC_NO,
-//                                             LT(1,KC_SPC),KC_ENT,   KC_ENT , LT(1,KC_BSPC),
-//                                                 KC_BSPC, KC_ESC,   KC_HOME, MO(2)
 
 //3-thumb
                                LGUI_T(KC_BSPC),LT(1,KC_SPC),                 LT(1,KC_BSPC), LT(3,KC_DEL),
