@@ -1,12 +1,6 @@
 #pragma once
 #define VIAL_KEYBOARD_UID {0xB2, 0xCB, 0xF0, 0x0E, 0xB2, 0x9F, 0xA7, 0xC8}
 
-/* top-left and top-right keys */
-#undef VIAL_UNLOCK_COMBO_ROWS
-#define VIAL_UNLOCK_COMBO_ROWS { 0, 5 }
-#undef VIAL_UNLOCK_COMBO_COLS
-#define VIAL_UNLOCK_COMBO_COLS { 0, 0 }
-
 #define PERMISSIVE_HOLD
 #define EE_HANDS
 
