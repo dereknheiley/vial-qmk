@@ -48,7 +48,7 @@ enum combos {
   KL_RBRC,
   KCLN_BSLS,
 
-  XC_BSPC,
+  XC_DEL,
   CV_ESC,
 
   MCOMM_MINS,
@@ -64,7 +64,7 @@ combo_t key_combos[COMBO_COUNT] = {
   [KL_RBRC] = COMBO(KL_COMBO, KC_RBRC),
   [KCLN_BSLS] = COMBO(KCLN_COMBO, KC_BSLS),
 
-  [XC_BSPC] = COMBO(XC_COMBO, KC_BSPC),
+  [XC_DEL] = COMBO(XC_COMBO, KC_DEL),
   [CV_ESC]  = COMBO(CV_COMBO, KC_ESC),
 
   [ MCOMM_MINS] = COMBO(  MCOMM_COMBO, KC_MINS),
