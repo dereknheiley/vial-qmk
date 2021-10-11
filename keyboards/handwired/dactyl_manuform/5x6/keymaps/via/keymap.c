@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "bit-c_led.h"
 
 /**** How to change the keyboard ****
 Make smaller changes directly in vial
@@ -168,6 +169,7 @@ const rgblight_segment_t* const PROGMEM RGB_LAYERS[] = RGBLIGHT_LAYERS_LIST(
 void keyboard_post_init_user(void) {
     // Enable the LED layers
     rgblight_layers = RGB_LAYERS;
+    set_bit_c_LED(LED_OFF); //LED_ON, LED_DIM, or LED_OFF
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -181,5 +183,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 bool led_update_user(led_t led_state) {
     rgblight_set_layer_state(1, led_state.caps_lock);
+    if (led_state.caps_lock) {
+        set_bit_c_LED(LED_ON); //LED_ON, LED_DIM, or LED_OFF
+    } else {
+        set_bit_c_LED(LED_OFF); //LED_ON, LED_DIM, or LED_OFF
+    }
     return true;
 }
