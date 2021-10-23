@@ -14,6 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+#define VIAL_KEYBOARD_UID {0x13, 0xBB, 0x91, 0xC2, 0x05, 0x96, 0xF0, 0x30}
 
 #ifndef CONFIG_H
 #define CONFIG_H
@@ -40,7 +41,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /*
  * Keyboard Matrix Assignments
+ *
+ * MATRIX_ROW_PINS and MATRIX_COL_PINS aren't actually used and are included
+ * for data driven compatibility.
  */
+#define MATRIX_COL_PINS { B0, B3, B2, B1, B6, B4, B5, C7 }
+#define MATRIX_ROW_PINS { NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN }
 #define UNUSED_PINS { C0, C1, C2, C3, C4, D2, D7 }
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
@@ -137,5 +143,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+#define DYNAMIC_KEYMAP_LAYER_COUNT 3
 
+// Unlock Combo
+#define VIAL_UNLOCK_COMBO_ROWS { 9, 1 }
+#define VIAL_UNLOCK_COMBO_COLS { 6, 1 }
 #endif
