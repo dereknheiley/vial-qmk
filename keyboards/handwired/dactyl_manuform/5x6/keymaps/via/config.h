@@ -14,7 +14,9 @@
 
 // #define TAPPING_TERM 200
 
-#define COMBO_COUNT 18
+// #undef COMBO_COUNT
+// #define VIAL_COMBO_ENTRIES 18
+// #undef COMBO_TERM
 #define COMBO_TERM 20
 
 #define RGBLED_NUM_PER_HALF 34
@@ -38,6 +40,8 @@
 #define RGBLIGHT_EFFECT_STATIC_GRADIENT
 // #define RGBLIGHT_EFFECT_TWINKLE
 
+
+// turn things off to save space
 #undef NO_ACTION_ONESHOT
 #define NO_ACTION_ONESHOT
 #undef NO_ACTION_MACRO

@@ -26,47 +26,47 @@ Make smaller changes directly in vial
 #define _RGB_LAYER 2
 #define _DUMMY_VIA_LAYER 3
 
-const uint16_t PROGMEM SD_COMBO[] = {KC_S, KC_D, COMBO_END};
-const uint16_t PROGMEM DF_COMBO[] = {KC_D, KC_F, COMBO_END};
+// const uint16_t PROGMEM SD_COMBO[] = {KC_S, KC_D, COMBO_END};
+// const uint16_t PROGMEM DF_COMBO[] = {KC_D, KC_F, COMBO_END};
 
-const uint16_t PROGMEM JK_COMBO[] = {KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM KL_COMBO[] = {KC_K, KC_L, COMBO_END};
+// const uint16_t PROGMEM JK_COMBO[] = {KC_J, KC_K, COMBO_END};
+// const uint16_t PROGMEM KL_COMBO[] = {KC_K, KC_L, COMBO_END};
 
-const uint16_t PROGMEM XC_COMBO[] = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM CV_COMBO[] = {KC_C, KC_V, COMBO_END};
+// const uint16_t PROGMEM XC_COMBO[] = {KC_X, KC_C, COMBO_END};
+// const uint16_t PROGMEM CV_COMBO[] = {KC_C, KC_V, COMBO_END};
 
-const uint16_t PROGMEM   MCOMM_COMBO[] = {   KC_M, KC_COMM, COMBO_END};
-const uint16_t PROGMEM COMMDOT_COMBO[] = {KC_COMM,  KC_DOT, COMBO_END};
+// const uint16_t PROGMEM   MCOMM_COMBO[] = {   KC_M, KC_COMM, COMBO_END};
+// const uint16_t PROGMEM COMMDOT_COMBO[] = {KC_COMM,  KC_DOT, COMBO_END};
 
-/* Declare the combos you will use here, and DON'T FORGET TO UPDATE config.h to set #define COMBO_COUNT number_of_combos_herez */
-enum combos {
-  SD_LBRC,
-  DF_RBRC,
+// /* Declare the combos you will use here, and DON'T FORGET TO UPDATE config.h to set #define VIAL_COMBO_ENTRIES number_of_combos_herez */
+// enum combos {
+//   SD_LBRC,
+//   DF_RBRC,
 
-  JK_LPRN,
-  KL_RPRN,
+//   JK_LPRN,
+//   KL_RPRN,
 
-  XC_DEL,
-  CV_ESC,
+//   XC_DEL,
+//   CV_ESC,
 
-  MCOMM_MINS,
-  COMMDOT_EQL
-};
+//   MCOMM_MINS,
+//   COMMDOT_EQL
+// };
 
-/* DON'T FORGET TO UPDATE config.h to set #define COMBO_COUNT number_of_combos_herez */
-combo_t key_combos[COMBO_COUNT] = {
-  [SD_LBRC] = COMBO(SD_COMBO, KC_LBRC),
-  [DF_RBRC] = COMBO(DF_COMBO, KC_RBRC),
+// /* DON'T FORGET TO UPDATE config.h to set #define VIAL_COMBO_ENTRIES number_of_combos_herez */
+// combo_t key_combos[VIAL_COMBO_ENTRIES] = {
+//   [SD_LBRC] = COMBO(SD_COMBO, KC_LBRC),
+//   [DF_RBRC] = COMBO(DF_COMBO, KC_RBRC),
 
-  [JK_LPRN] = COMBO(JK_COMBO, KC_LPRN),
-  [KL_RPRN] = COMBO(KL_COMBO, KC_RPRN),
+//   [JK_LPRN] = COMBO(JK_COMBO, KC_LPRN),
+//   [KL_RPRN] = COMBO(KL_COMBO, KC_RPRN),
 
-  [XC_DEL] = COMBO(XC_COMBO, KC_DEL),
-  [CV_ESC]  = COMBO(CV_COMBO, KC_ESC),
+//   [XC_DEL] = COMBO(XC_COMBO, KC_DEL),
+//   [CV_ESC]  = COMBO(CV_COMBO, KC_ESC),
 
-  [ MCOMM_MINS] = COMBO(  MCOMM_COMBO, KC_MINS),
-  [COMMDOT_EQL] = COMBO(COMMDOT_COMBO, KC_EQL)
-};
+//   [ MCOMM_MINS] = COMBO(  MCOMM_COMBO, KC_MINS),
+//   [COMMDOT_EQL] = COMBO(COMMDOT_COMBO, KC_EQL)
+// };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
