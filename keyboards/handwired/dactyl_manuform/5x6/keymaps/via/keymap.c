@@ -131,62 +131,62 @@ LSFT_T(KC_CAPS), KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                        
 // https://beta.docs.qmk.fm/using-qmk/hardware-features/lighting/feature_rgblight#lighting-layers
 // https://beta.docs.qmk.fm/using-qmk/hardware-features/lighting/feature_rgblight#colors
 
-const rgblight_segment_t PROGMEM _DEFAULT_LED_LAYER[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0 , 3, HSV_WHITE}
-);
+// const rgblight_segment_t PROGMEM _DEFAULT_LED_LAYER[] = RGBLIGHT_LAYER_SEGMENTS(
+//     {0 , 3, HSV_WHITE}
+// );
 
-const rgblight_segment_t PROGMEM _CAPS_LOCK_LED_LAYER[] = RGBLIGHT_LAYER_SEGMENTS(
-    // change all three LEDS as caps lock LED indicator
-    {0 , 3, HSV_CYAN}
-);
+// const rgblight_segment_t PROGMEM _CAPS_LOCK_LED_LAYER[] = RGBLIGHT_LAYER_SEGMENTS(
+//     // change all three LEDS as caps lock LED indicator
+//     {0 , 3, HSV_CYAN}
+// );
 
-const rgblight_segment_t PROGMEM _LED_LAYER_1[] = RGBLIGHT_LAYER_SEGMENTS(
-    // Light ESDF arrow keys when layer 1 is active
-    {0, 1, HSV_WHITE}
-);
+// const rgblight_segment_t PROGMEM _LED_LAYER_1[] = RGBLIGHT_LAYER_SEGMENTS(
+//     // Light ESDF arrow keys when layer 1 is active
+//     {0, 1, HSV_WHITE}
+// );
 
-const rgblight_segment_t PROGMEM _LED_LAYER_2[] = RGBLIGHT_LAYER_SEGMENTS(
-    // Light ESDF arrow keys when layer 1 is active
-    {0, 1, HSV_RED}
-    ,{1, 1, HSV_GREEN}
-    ,{2, 1, HSV_BLUE}
-);
+// const rgblight_segment_t PROGMEM _LED_LAYER_2[] = RGBLIGHT_LAYER_SEGMENTS(
+//     // Light ESDF arrow keys when layer 1 is active
+//     {0, 1, HSV_RED}
+//     ,{1, 1, HSV_GREEN}
+//     ,{2, 1, HSV_BLUE}
+// );
 
-const rgblight_segment_t PROGMEM _LED_LAYER_3[] = RGBLIGHT_LAYER_SEGMENTS(
-    // Light ESDF arrow keys when layer 1 is active
-    {2, 1, HSV_PURPLE}
-);
+// const rgblight_segment_t PROGMEM _LED_LAYER_3[] = RGBLIGHT_LAYER_SEGMENTS(
+//     // Light ESDF arrow keys when layer 1 is active
+//     {2, 1, HSV_PURPLE}
+// );
 
-// Now define the array of layers. Later layers take precedence
-const rgblight_segment_t* const PROGMEM RGB_LAYERS[] = RGBLIGHT_LAYERS_LIST(
-    _DEFAULT_LED_LAYER
-    ,_CAPS_LOCK_LED_LAYER
-    ,_LED_LAYER_1   // Overrides caps lock layer
-    ,_LED_LAYER_2   // Overrides previous layer
-    ,_LED_LAYER_3   // Overrides other previous layers again
-);
+// // Now define the array of layers. Later layers take precedence
+// const rgblight_segment_t* const PROGMEM RGB_LAYERS[] = RGBLIGHT_LAYERS_LIST(
+//     _DEFAULT_LED_LAYER
+//     ,_CAPS_LOCK_LED_LAYER
+//     ,_LED_LAYER_1   // Overrides caps lock layer
+//     ,_LED_LAYER_2   // Overrides previous layer
+//     ,_LED_LAYER_3   // Overrides other previous layers again
+// );
 
-void keyboard_post_init_user(void) {
-    // Enable the LED layers
-    rgblight_layers = RGB_LAYERS;
-    set_bit_c_LED(LED_OFF); //LED_ON, LED_DIM, or LED_OFF
-}
+// void keyboard_post_init_user(void) {
+//     // Enable the LED layers
+//     rgblight_layers = RGB_LAYERS;
+//     set_bit_c_LED(LED_OFF); //LED_ON, LED_DIM, or LED_OFF
+// }
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    // Both layers will light up if both kb layers are active
-    // rgblight_set_layer_state(0, layer_state_cmp(state, _DEFAULT_LED_LAYER));
-    rgblight_set_layer_state(2, layer_state_cmp(state, _FN_LAYER));
-    rgblight_set_layer_state(3, layer_state_cmp(state, _RGB_LAYER));
-    rgblight_set_layer_state(4, layer_state_cmp(state, _DUMMY_VIA_LAYER));
-    return state;
-}
+// layer_state_t layer_state_set_user(layer_state_t state) {
+//     // Both layers will light up if both kb layers are active
+//     // rgblight_set_layer_state(0, layer_state_cmp(state, _DEFAULT_LED_LAYER));
+//     rgblight_set_layer_state(2, layer_state_cmp(state, _FN_LAYER));
+//     rgblight_set_layer_state(3, layer_state_cmp(state, _RGB_LAYER));
+//     rgblight_set_layer_state(4, layer_state_cmp(state, _DUMMY_VIA_LAYER));
+//     return state;
+// }
 
-bool led_update_user(led_t led_state) {
-    rgblight_set_layer_state(1, led_state.caps_lock);
-    if (led_state.caps_lock) {
-        set_bit_c_LED(LED_ON); //LED_ON, LED_DIM, or LED_OFF
-    } else {
-        set_bit_c_LED(LED_OFF); //LED_ON, LED_DIM, or LED_OFF
-    }
-    return true;
-}
+// bool led_update_user(led_t led_state) {
+//     rgblight_set_layer_state(1, led_state.caps_lock);
+//     if (led_state.caps_lock) {
+//         set_bit_c_LED(LED_ON); //LED_ON, LED_DIM, or LED_OFF
+//     } else {
+//         set_bit_c_LED(LED_OFF); //LED_ON, LED_DIM, or LED_OFF
+//     }
+//     return true;
+// }
