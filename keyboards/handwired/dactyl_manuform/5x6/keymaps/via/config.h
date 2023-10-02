@@ -5,7 +5,7 @@
 #define EE_HANDS
 
 #undef MANUFACTURER
-#define MANUFACTURER DKN
+#define MANUFACTURER "DKN"
 
 /* this combination of PERMISSIVE_HOLD being off and IGNORE_MOD_TAP_INTERRUPT being on 
  * helps with keys like A are also SHIFT when held */
