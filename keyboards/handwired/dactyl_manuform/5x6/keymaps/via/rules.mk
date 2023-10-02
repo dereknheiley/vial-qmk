@@ -1,6 +1,7 @@
+VIA_ENABLE = yes
 VIAL_ENABLE = yes
 VIAL_INSECURE = yes
-VIA_ENABLE = yes
+
 RGBLIGHT_ENABLE = no
 COMBO_ENABLE = yes
 

@@ -1,5 +1,5 @@
 #include QMK_KEYBOARD_H
-#include "bit-c_led.h"
+// #include "bit-c_led.h"
 
 /**** How to change the keyboard ****
 Make smaller changes directly in vial
@@ -25,7 +25,7 @@ Make smaller changes directly in vial
 #define _QWERTY_LAYER 0
 #define _FN_LAYER 1
 #define _RGB_LAYER 2
-#define _DUMMY_VIA_LAYER 3
+// #define _DUMMY_VIA_LAYER 3
 
 // const uint16_t PROGMEM SD_COMBO[] = {KC_S, KC_D, COMBO_END};
 // const uint16_t PROGMEM DF_COMBO[] = {KC_D, KC_F, COMBO_END};
@@ -116,16 +116,16 @@ LSFT_T(KC_CAPS), KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                        
                                               _______,_______,            _______,_______
   ),
 
-    [_DUMMY_VIA_LAYER] = LAYOUT_5x6(
-       KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
-       KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
-       KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
-       KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
-                       KC_NO , KC_NO ,                                                         KC_NO , KC_NO,
-                                                   KC_NO,KC_NO,            KC_NO,KC_NO,
-                                                   KC_NO,KC_NO,            KC_NO,KC_NO,
-                                                   KC_NO,KC_NO,            KC_NO,KC_NO
-  ),
+  //   [_DUMMY_VIA_LAYER] = LAYOUT_5x6(
+  //      KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
+  //      KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
+  //      KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
+  //      KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                        KC_NO  , KC_NO , KC_NO , KC_NO ,KC_NO ,KC_NO ,
+  //                      KC_NO , KC_NO ,                                                         KC_NO , KC_NO,
+  //                                                  KC_NO,KC_NO,            KC_NO,KC_NO,
+  //                                                  KC_NO,KC_NO,            KC_NO,KC_NO,
+  //                                                  KC_NO,KC_NO,            KC_NO,KC_NO
+  // ),
 };
 
 // https://beta.docs.qmk.fm/using-qmk/hardware-features/lighting/feature_rgblight#lighting-layers
